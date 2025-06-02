@@ -21,25 +21,7 @@ function StartScreen({ onStart }) {
         <option value="review">📘 Solo da ripassare</option>
       </select>
 
-      {mode !== "interval" && (
-        <>
-          <label className="block mb-2 font-semibold">Numero di domande:</label>
-          <select
-            className="w-full p-2 border rounded mb-4"
-            value={count}
-            onChange={(e) => setCount(Number(e.target.value))}
-          >
-            {[...Array(88)].map((_, i) => {
-              const n = (i + 1) * 10;
-              return (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              );
-            })}
-          </select>
-        </>
-      )}
+      
 
       {mode === "review" && (
         <>
