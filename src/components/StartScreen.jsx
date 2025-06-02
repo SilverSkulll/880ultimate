@@ -5,6 +5,7 @@ export default function StartScreen({ onStart }) {
   const [start, setStart] = useState(1);
   const [end, setEnd] = useState(10);
   const [count, setCount] = useState(10);
+  const reviewQuestions = JSON.parse(localStorage.getItem("reviewQuestions") || "[]");
   const [timer, setTimer] = useState(10);
 
   const handleStart = () => {
