@@ -178,7 +178,7 @@ Numero;Domanda;A;B;C;Corretta
 177; Nella violenza o minaccia al pubblico ufficiale la condotta è volta a;condizionare il futuro operato del pubblico ufficiale;ostacolare il compimento di un atto del pubblico ufficiale;ledere la dignità del pubblico ufficiale;A
 178; La pena per il delitto di violenza o minaccia al pubblico ufficiale è diminuita se;la violenza o minaccia è diretta all'adozione di un atto d'ufficio;la violenza o minaccia è diretta ad ottenere un atto contrario ai doveri d'ufficio;la violenza o minaccia è diretta a far omettere un atto d'ufficio;A
 179; La resistenza al pubblico ufficiale è diretta a;opporsi al compimento di un atto dufficio;costringere il pubblico ufficiale a compiere un atto dufficio;costringere il pubblico ufficiale ad omettere un atto dufficio;A
-180; Loltraggio è estinto se;risarcisce il danno a favore dellente pubblico;il reo prima del giudizio risarcisce integralmente il danno a favore del pubblico ufficiale offeso e della Pubblica Amministrazione;si scusa pubblicamente;B
+180; L'oltraggio è estinto se;risarcisce il danno a favore dellente pubblico;il reo prima del giudizio risarcisce integralmente il danno a favore del pubblico ufficiale offeso e della Pubblica Amministrazione;si scusa pubblicamente;B
 181;Qual è il bene giuridico tutelato nei delitti contro lamministrazione della giustizia?;Linteresse allacquisizione della notizia criminosa da parte dellAutorità Giudiziaria, affinché la stessa sia messa in condizione di esercitare correttamente lazione penale;Linteresse che la procedura di notificazione venga correttamente eseguita da parte del soggetto incaricato;Linteresse a che limputato non menta nel corso dellinterrogatorio;A
 182;Quali possono essere i soggetti attivi dei delitti contro lamministrazione della giustizia?;I reati contro lamministrazione della giustizia sono stati depenalizzati;Essendo reati propri, soltanto determinati soggetti che per le funzioni svolte sono posti in particolare relazione con linteresse tutelato, ovvero pubblico ufficiale ed incaricato di pubblico servizio;Qualunque soggetto, trattandosi di reati comuni;C
 183;Il dolo rappresenta il normale criterio dellimputazione soggettiva. Componenti proprie dellelemento psicologico del dolo sono rappresentazione e volontà, in ordine alle quali è corretto affermare che;La sufficienza dello stato di dubbio, ai fini dellesistenza del dolo, è da escludere laddove la norma esiga la piena conoscenza di uno o più elementi del fatto di reato;Il dolo non è previsto dal nostro ordinamento giuridico;In ogni caso è sufficiente lo stato di dubbio per la configurazione del dolo;A
@@ -229,16 +229,16 @@ Numero;Domanda;A;B;C;Corretta
 228; Presupposto del reato di appropriazione indebita è;Lidentità del proprietario della cosa;Lignoranza della provenienza;Il possesso della cosa da parte dellagente;C
 229; Per il delitto di appropriazione indebita, è consentito il fermo ai sensi dellart. 384, c.p.p.?;No;Sì;Dipende dal valore delloggetto materiale;A
 230; Per il delitto di appropriazione indebita, larresto è;discrezione del giudice;Obbligatorio;Facoltativo;C
-231;#NOME?;Sì;No;Solo se il soggetto attivo è ultrasessantacinquenne;A
+231;Il delitto di estorsione è un reato comune?;Sì;No;Solo se il soggetto attivo è ultrasessantacinquenne;A
 232;- Nel delitto di estorsione la condotta dell'agente è;Un inganno tramite artifizi e raggiri che conduce all'errore;Costringere tramite violenza;ostringere tramite violenza o minaccia;C
 233;- Qual è l'elemento soggettivo del reato di estorsione?;Il dolo;La colpa;La preterintenzione;A
 234;- Per il delitto di estorsione l'arresto è;Facoltativo solo se l'autore del fatto è un cittadino dell'Unione Europea;Obbligatorio ex art. 380 c.p.p.;Facoltativo, ex art. 381 c.p.p;B
-235;#NOME?;D'ufficio;A querela di parte;A querela di parte se non vi sono aggravanti;A
-236;#NOME?;semi offensivo;Pluri offensivo;Mono offensivo;B
-237;#NOME?;No;Sì;Può essere sia proprio che comune;B
+235;In caso di estorsione si procede;D'ufficio;A querela di parte;A querela di parte se non vi sono aggravanti;A
+236;Il reato di truffa è;semi offensivo;Pluri offensivo;Mono offensivo;B
+237;Il delitto di truffa è un reato proprio?;No;Sì;Può essere sia proprio che comune;B
 238;- Nel reato di truffa, è prevista la circostanza aggravante speciale;di un ente pubblico;dello Stato;dello Stato o di un altro ente pubblico o dellUnione Europea;C
 239;- Per il caso di truffa, è consentito il fermo ai sensi dell'art. 384, c.p.p.?;No;Sì;A discrezione dell'Autorità Giudiziaria;A
-240;#NOME?;D'ufficio;A querela di parte;A querela di parte, salvo ipotesi di cui al comma 3 dellart. 640 C.P., nonché ipotesi di cui allart. 649 bis;C
+240;Per il delitto di truffa la procedibilità è;D'ufficio;A querela di parte;A querela di parte, salvo ipotesi di cui al comma 3 dellart. 640 C.P., nonché ipotesi di cui allart. 649 bis;C
 241; A quale categoria appartengono i maltrattamenti in famiglia?;Reati contro la persona;Reati contro la famiglia;Reati contro lordine pubblico;B
 242; Un singolo episodio di violenza domestica può configurare il reato di maltrattamenti?;Sì, purché causi uno stato di malattia nel soggetto passivo;No, servono condotte abituali che causino sofferenze fisiche e/o mentali;Sì;B
 243; In quali tipologie di rapporto, tra autore e vittima, si inseriscono le condotte previste dallarticolo 572 del codice penale?;Di semplice conoscenza;Di amicizia;Di familiarità o di sottoposizione allautorità o allaffidamento per ragioni di educazione, cura, vigilanza o custodia;C
@@ -253,7 +253,7 @@ Numero;Domanda;A;B;C;Corretta
 252;Un Vice Sovrintendente è;in alcune circostanze è Agente, in altre è Ufficiale di P.G.;un Agente di P.G.;un Ufficiale di P.G.;C
 253;La censura è una sanzione disciplinare che può essere inflitta;solo agli Agenti di p.g.;solo agli Ufficiali di p.g.;sia agli Ufficiali che agli Agenti di p.g.;C
 254;Che cosa sono i Servizi di Polizia Giudiziaria?;Sono uffici presenti presso le Procure;Sono Uffici a cui sono assegnati solo Ufficiali di p.g. per svolgere lattività di polizia giudiziaria;Sono Uffici ed Unità ai quali è affidato il compito di svolgere, in via prioritaria e continuativa, le funzioni di polizia giudiziaria;C
-255;LAgente di P.G. che non riferisce dolosamente una notizia di reato è punito;con una sanzione penale;solo con una sanzione disciplinare;con il trasferimento ad un servizio che non preveda lo svolgimento di attività;A
+255;L'Agente di P.G. che non riferisce dolosamente una notizia di reato è punito;con una sanzione penale;solo con una sanzione disciplinare;con il trasferimento ad un servizio che non preveda lo svolgimento di attività;A
 256;Il Sindaco è un Ufficiale di P.G.;mai;sempre;solo se nel suo comune non cè un Ufficio di Polizia, Carabinieri o Guardia di Finanza;C
 257;Da chi dipende funzionalmente la Polizia Giudiziaria?;Dal P.M.;Dal Questore;Dal Ministro di Grazia e Giustizia;A
 258;Una sezione di P.G. può essere costituita presso;la Questura;la Procura della Repubblica presso il Tribunale;la Procura Generale della Repubblica presso la Corte dAppello;B
@@ -377,8 +377,8 @@ Numero;Domanda;A;B;C;Corretta
 386;Il trattenimento in un C.P.R. può essere superiore a 180 gg?;Si, in caso di pericolosità del soggetto;Si, nel caso in cui non sia stata accertata lidentità del soggetto;Si, nel caso in cui lo straniero sia richiedente asilo;B
 387;Lo straniero che non ottempera allordine di lasciare il territorio nazionale entro 7 gg può essere arrestato?;Si, nel caso in cui sia pericoloso per lordine e la sicurezza pubblica;No, tranne nel caso in cui commetta uno specifico reato per il quale è previsto larresto.;Si, sempre;B
 388;Lo straniero che ha più di 14 anni e sbarca sul territorio nazionale deve essere sempre fotosegnalato?;No, se in possesso di documenti in corso di validità;No, se richiedente asilo;Si, sempre;C
-389;Al Rimpatrio Volontario Assistito possono accedere tutti i cittadini extracomunitari?;Si, indistintamente;Si, con eccezione degli stranieri considerati pericolosi per lordine e la sicurezza pubblica;No, devono sussistere i presupposti indicati dalla normativa.;C
-390;Domanda;3;2;1;C
+389;Lo straniero detenuto, allatto della scarcerazione, può essere trattenuto in un C.P.R.?;Si, sempre;No, se ha già superato un periodo di detenzione superiore a 90 gg;Si, se esistono i presupposti per il trattenimento previsti dalla legge;C
+390;Al Rimpatrio Volontario Assistito possono accedere tutti i cittadini extracomunitari?;Si, indistintamente;Si, con eccezione degli stranieri considerati pericolosi per lordine e la sicurezza pubblica;No, devono sussistere i presupposti indicati dalla normativa;C
 391;In quale norma internazionale è previsto il principio della preminenza dellinteresse del minore nei procedimenti amministrativi e giudiziari?;Lart. 1 della Convenzione dellAja del 1961;Lart. 2 della Convenzione di Montego Bay;Lart. 3 della Convenzione dei diritti sullinfanzia e sulladolescenza;C
 392;In quali di questi casi si è in presenza di un minore straniero non accompagnato?;Un minore in territorio italiano non accompagnato da genitori ma da parenti entro il quarto grado;Un minore in territorio italiano privo di assistenza e di rappresentanza da parte dei genitori o di altri adulti per lui legalmente responsabili in base alle norme vigenti nellordinamento italiano;Un minore allestero privo di assistenza e di rappresentanza;B
 393;Può essere respinto alla frontiera un minore straniero non accompagnato?;No, in nessun caso;Solo nei casi previsti;Sì, sempre;A
