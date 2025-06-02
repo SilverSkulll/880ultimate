@@ -47,11 +47,7 @@ export default function StartScreen({ onStart }) {
         <div className="mb-4">
           <label className="block font-semibold mb-1">Numero di domande:</label>
           <select className="w-full p-2 border rounded" value={count} onChange={(e) => setCount(Number(e.target.value))}>
-            {[10, 20, 30, 40, 50].map((n) => (
-              <option key={n} value={n}>
-                {n}
-              </option>
-            ))}
+            {[...Array(88)].map((_, i) => { const n = (i + 1) * 10; return (<option key={n} value={n}>{n}</option>); })}
           </select>
         </div>
       )}
