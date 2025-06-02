@@ -71,3 +71,21 @@ export default function StartScreen({ onStart }) {
     </div>
   );
 }
+
+
+        {mode === "review" && (
+          <select
+            className="w-full p-2 border rounded mt-2"
+            value={count}
+            onChange={(e) => setCount(Number(e.target.value))}
+          >
+            {[...Array(30)].map((_, i) => {
+              const n = (i + 1) * 10;
+              return (
+                <option key={n} value={n}>
+                  {n}
+                </option>
+              );
+            })}
+          </select>
+        )}
