@@ -43,11 +43,15 @@ export default function App() {
 
         if (config.mode === 'random') {
           selected = shuffle(all).slice(0, config.count);
-        } else if (config.mode === 'interval') {
+} else if (config.mode === 'interval') {
           selected = all.filter(q => {
+            const num = parseInt(q.Numero, 10);
+            return num >= config.start && num <= config.end;
+          });
+
             const n = parseInt(q.Numero, 10);
             return n >= config.start && n <= config.end;
-          }).slice(0, config.count);
+
         } else if (config.mode === 'review') {
           selected = all.filter(q => reviewList.includes(parseInt(q.Numero, 10)));
         }
