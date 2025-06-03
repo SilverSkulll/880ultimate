@@ -54,7 +54,6 @@ export default function StartScreen({ onStart }) {
       <div className="mb-4">
         <label className="block font-semibold mb-1">Ripasso automatico errori:</label>
         <button
-        <button
           type="button"
           className={autoSaveErrors ? "w-full p-2 rounded font-semibold bg-green-700 text-white" : "w-full p-2 rounded font-semibold bg-gray-200"}
           onClick={() => setAutoSaveErrors(!autoSaveErrors)}
