@@ -54,13 +54,13 @@ export default function StartScreen({ onStart }) {
       <div className="mb-4">
         <label className="block font-semibold mb-1">Ripasso automatico errori:</label>
         <button
+        <button
           type="button"
-          className={`w-full p-2 rounded font-semibold ${autoSaveErrors ? 'bg-green-700 text-white' : 'bg-gray-200'}`}
+          className={autoSaveErrors ? "w-full p-2 rounded font-semibold bg-green-700 text-white" : "w-full p-2 rounded font-semibold bg-gray-200"}
           onClick={() => setAutoSaveErrors(!autoSaveErrors)}
         >
-          {autoSaveErrors ? '✅ Attivo - Salva errori in ripasso' : '❌ Non attivo'}
+          {autoSaveErrors ? "✅ Attivo - Salva errori in ripasso" : "❌ Non attivo"}
         </button>
-      </div>
       <div className="mb-4">
         <label className="block font-semibold mb-1">Timer (minuti):</label>
         <select className="w-full p-2 border rounded" value={timer} onChange={(e) => setTimer(Number(e.target.value))}>
