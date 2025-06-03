@@ -25,13 +25,6 @@ export default function App() {
           if (t <= 1) {
             clearInterval(countdown);
             setShowResults(true);
-if (autoSaveErrors) {
-      const wrongQuestions = quizData.filter((q, i) => selectedAnswers[i] !== q.Corretta)
-                                     .map(q => parseInt(q.Numero, 10));
-      const updated = [...new Set([...reviewList, ...wrongQuestions])];
-      localStorage.setItem('reviewList', JSON.stringify(updated));
-      setReviewList(updated);
-    }
             return 0;
           }
           return t - 1;
@@ -42,7 +35,6 @@ if (autoSaveErrors) {
   }, [timer]);
 
   const startQuiz = (config) => {
-    const { autoSaveErrors } = config;
     fetch('/quiz_domande_320.csv')
       .then(res => res.text())
       .then(csv => {
