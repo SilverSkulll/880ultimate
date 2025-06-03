@@ -19,15 +19,12 @@ export default function App() {
   const [timer, setTimer] = useState(0);
 
   useEffect(() => {
-  useEffect(() => {    if (showResults && autoSaveErrors) {      const wrongQuestions = quizData        .map((q, i) => ({ numero: parseInt(q.Numero, 10), isCorrect: selectedAnswers[i] === q.Corretta }))        .filter(item => !item.isCorrect)        .map(item => item.numero);      const updated = [...new Set([...reviewList, ...wrongQuestions])];      localStorage.setItem('reviewList', JSON.stringify(updated));      setReviewList(updated);    }  }, [showResults]);    if (timer > 0) {
+    if (timer > 0) {
       const countdown = setInterval(() => {
         setTimer(t => {
           if (t <= 1) {
             clearInterval(countdown);
             setShowResults(true);
-
-        
-
             return 0;
           }
           return t - 1;
@@ -38,7 +35,6 @@ export default function App() {
   }, [timer]);
 
   const startQuiz = (config) => {
-    const { autoSaveErrors } = config;
     fetch('/quiz_domande_320.csv')
       .then(res => res.text())
       .then(csv => {
@@ -114,12 +110,10 @@ export default function App() {
               <p className={!isCorrect ? 'text-red-600' : 'text-green-600'}>
                 {isCorrect ? 'Risposta esatta' : `❌ Hai risposto: ${q[user] || '-'}`}
               </p>
-              {!autoSaveErrors && (
-                <label className="block mt-2">
-                  <input type="checkbox" checked={reviewList.includes(parseInt(q.Numero, 10))} onChange={() => toggleReview(parseInt(q.Numero, 10))} />
-                  {' '}Segna come da ripassare
-                </label>
-)}
+              <label className="block mt-2">
+                <input type="checkbox" checked={reviewList.includes(parseInt(q.Numero, 10))} onChange={() => toggleReview(parseInt(q.Numero, 10))} />
+                {' '}Segna come da ripassare
+              </label>
             </div>
           );
         })}
@@ -178,6 +172,7 @@ export default function App() {
           <button onClick={() => setShowResults(true)} className="px-6 py-3 bg-green-600 text-white rounded-xl shadow">
             ✅ Concludi
           </button>
+        )}
       </div>
     </div>
   );
