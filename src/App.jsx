@@ -7,14 +7,6 @@ function shuffle(array) {
 }
 
 export default function App() {
-
-  if (showResults) {
-    const total = Object.keys(selectedAnswers).length;
-    const correct = Object.values(selectedAnswers).filter(x => x.isCorrect).length;
-    const wrong = total - correct;
-    const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
-  }
-
   const [quizData, setQuizData] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,17 +30,7 @@ export default function App() {
           return t - 1;
         });
       }, 1000);
-      return (
-
-      {showResults && (
-        <div className="text-center p-4">
-          <h2 className="text-2xl font-bold">Risultati del Test</h2>
-          <p className="text-xl mt-2">✅ <span style={{ color: 'green', fontWeight: 'bold' }}>{correct}</span> corrette</p>
-          <p className="text-xl">❌ <span style={{ color: 'red', fontWeight: 'bold' }}>{wrong}</span> errate</p>
-          <p className="text-xl mt-1">📊 <strong>{percentage}%</strong> di risposte corrette</p>
-        </div>
-      )}
-) => clearInterval(countdown);
+      return () => clearInterval(countdown);
     }
   }, [timer]);
 
@@ -100,33 +82,19 @@ export default function App() {
 
   if (showResults || currentIndex >= quizData.length) {
     return (
-
-      {showResults && (
-        <div className="text-center p-4">
-          <h2 className="text-2xl font-bold">Risultati del Test</h2>
-          <p className="text-xl mt-2">✅ <span style={{ color: 'green', fontWeight: 'bold' }}>{correct}</span> corrette</p>
-          <p className="text-xl">❌ <span style={{ color: 'red', fontWeight: 'bold' }}>{wrong}</span> errate</p>
-          <p className="text-xl mt-1">📊 <strong>{percentage}%</strong> di risposte corrette</p>
-        </div>
-      )}
-
       <div className="p-6 max-w-4xl mx-auto">
+        <div className="text-center p-4 border border-gray-300 rounded-lg mb-6 shadow">
+          <h2 className="text-2xl font-bold">📊 Risultati complessivi</h2>
+          <p className="text-lg mt-2">✅ <span style={{ color: 'green', fontWeight: 'bold' }}>{Object.values(selectedAnswers).filter(x => x === quizData[parseInt(x.Numero) - 1]?.Corretta).length}</span> corrette</p>
+          <p className="text-lg">❌ <span style={{ color: 'red', fontWeight: 'bold' }}>{Object.keys(selectedAnswers).length - Object.values(selectedAnswers).filter(x => x === quizData[parseInt(x.Numero) - 1]?.Corretta).length}</span> errate</p>
+          <p className="text-lg mt-1">📈 <strong>{Math.round((Object.values(selectedAnswers).filter(x => x === quizData[parseInt(x.Numero) - 1]?.Corretta).length / Object.keys(selectedAnswers).length) * 100)}%</strong> corrette</p>
+        </div>
         <h2 className="text-2xl font-bold mb-4 text-center">📘 Riepilogo del test</h2>
         {quizData.map((q, i) => {
           const corr = q.Corretta;
           const user = selectedAnswers[i];
           const isCorrect = user === corr;
           return (
-
-      {showResults && (
-        <div className="text-center p-4">
-          <h2 className="text-2xl font-bold">Risultati del Test</h2>
-          <p className="text-xl mt-2">✅ <span style={{ color: 'green', fontWeight: 'bold' }}>{correct}</span> corrette</p>
-          <p className="text-xl">❌ <span style={{ color: 'red', fontWeight: 'bold' }}>{wrong}</span> errate</p>
-          <p className="text-xl mt-1">📊 <strong>{percentage}%</strong> di risposte corrette</p>
-        </div>
-      )}
-
             <div key={i} className="mb-4 p-6 rounded-xl border bg-white shadow-md">
               <p className="font-semibold mb-2">{q.Numero}. {q.Domanda}</p>
               <p>✅ Corretta: {q[corr]}</p>
@@ -152,16 +120,6 @@ export default function App() {
   const correct = q.Corretta;
 
   return (
-
-      {showResults && (
-        <div className="text-center p-4">
-          <h2 className="text-2xl font-bold">Risultati del Test</h2>
-          <p className="text-xl mt-2">✅ <span style={{ color: 'green', fontWeight: 'bold' }}>{correct}</span> corrette</p>
-          <p className="text-xl">❌ <span style={{ color: 'red', fontWeight: 'bold' }}>{wrong}</span> errate</p>
-          <p className="text-xl mt-1">📊 <strong>{percentage}%</strong> di risposte corrette</p>
-        </div>
-      )}
-
     <div className="p-6 max-w-3xl mx-auto min-h-screen flex flex-col items-center justify-center">
       <div className="w-full mb-4 text-center">
         <h2 className="text-2xl font-bold mb-2">Domanda {currentIndex + 1} / {quizData.length}</h2>
@@ -180,16 +138,6 @@ export default function App() {
             base + "bg-gray-100 hover:bg-gray-200";
 
           return (
-
-      {showResults && (
-        <div className="text-center p-4">
-          <h2 className="text-2xl font-bold">Risultati del Test</h2>
-          <p className="text-xl mt-2">✅ <span style={{ color: 'green', fontWeight: 'bold' }}>{correct}</span> corrette</p>
-          <p className="text-xl">❌ <span style={{ color: 'red', fontWeight: 'bold' }}>{wrong}</span> errate</p>
-          <p className="text-xl mt-1">📊 <strong>{percentage}%</strong> di risposte corrette</p>
-        </div>
-      )}
-
             <div
               key={opt}
               role="button"
