@@ -6,13 +6,24 @@ export default function StartScreen({ onStart }) {
   const [end, setEnd] = useState(10);
   const [count, setCount] = useState(10);
   const [timer, setTimer] = useState(10);
+  const [autoSaveErrors, setAutoSaveErrors] = useState(false);
 
   const handleStart = () => {
-    onStart({ mode, count, start, end, timer });
+    onStart({ mode, count, start, end, timer, autoSaveErrors });
   };
 
   return (
-    <div className="p-6 text-center max-w-xl mx-auto bg-white rounded shadow">
+    <div className="p-6 text-center max-w-xl mx-auto bg-white rounded shadow relative">
+      <div className="absolute top-4 left-4">
+        <button
+          type="button"
+          className={autoSaveErrors ? "bg-green-700 text-white px-4 py-2 rounded" : "bg-gray-300 text-black px-4 py-2 rounded"}
+          onClick={() => setAutoSaveErrors(!autoSaveErrors)}
+        >
+          {autoSaveErrors ? "📌 Salva errori nel ripasso" : "Ripasso errori disattivo"}
+        </button>
+      </div>
+
       <h2 className="text-2xl font-bold mb-4">Imposta il tuo quiz</h2>
 
       <div className="mb-4">
