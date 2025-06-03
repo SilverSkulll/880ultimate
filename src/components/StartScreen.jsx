@@ -6,9 +6,10 @@ export default function StartScreen({ onStart }) {
   const [end, setEnd] = useState(10);
   const [count, setCount] = useState(10);
   const [timer, setTimer] = useState(10);
+  const [autoSaveErrors, setAutoSaveErrors] = useState(false);
 
   const handleStart = () => {
-    onStart({ mode, count, start, end, timer });
+    onStart({ mode, count, start, end, timer, autoSaveErrors });
   };
 
   return (
