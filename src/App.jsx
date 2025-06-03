@@ -85,7 +85,7 @@ export default function App() {
       <div className="p-6 max-w-4xl mx-auto">
         {(() => {
           const total = quizData.length;
-          const correct = quizData.filter((q, i) => selectedAnswers[i] === q.Corretta).length;
+          const correct = quizData.reduce((acc, q, i) => selectedAnswers[i] === q.Corretta ? acc + 1 : acc, 0);
           const wrong = total - correct;
           const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
           return (
