@@ -119,10 +119,7 @@ export default function App() {
                   <input type="checkbox" checked={reviewList.includes(parseInt(q.Numero, 10))} onChange={() => toggleReview(parseInt(q.Numero, 10))} />
                   {' '}Segna come da ripassare
                 </label>
-              )}
-                {' '}Segna come da ripassare
 )}
-              </label>
             </div>
           );
         })}
@@ -181,7 +178,6 @@ export default function App() {
           <button onClick={() => setShowResults(true)} className="px-6 py-3 bg-green-600 text-white rounded-xl shadow">
             ✅ Concludi
           </button>
-        )}
       </div>
     </div>
   );
