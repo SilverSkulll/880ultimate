@@ -114,9 +114,12 @@ export default function App() {
               <p className={!isCorrect ? 'text-red-600' : 'text-green-600'}>
                 {isCorrect ? 'Risposta esatta' : `❌ Hai risposto: ${q[user] || '-'}`}
               </p>
-{!autoSaveErrors && (
-              <label className="block mt-2">
-                <input type="checkbox" checked={reviewList.includes(parseInt(q.Numero, 10))} onChange={() => toggleReview(parseInt(q.Numero, 10))} />
+              {!autoSaveErrors && (
+                <label className="block mt-2">
+                  <input type="checkbox" checked={reviewList.includes(parseInt(q.Numero, 10))} onChange={() => toggleReview(parseInt(q.Numero, 10))} />
+                  {' '}Segna come da ripassare
+                </label>
+              )}
                 {' '}Segna come da ripassare
 )}
               </label>
