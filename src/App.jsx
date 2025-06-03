@@ -26,6 +26,16 @@ export default function App() {
             clearInterval(countdown);
             setShowResults(true);
 
+        if (autoSaveErrors) {
+          const wrongQuestions = quizData
+            .map((q, i) => ({ numero: parseInt(q.Numero, 10), isCorrect: selectedAnswers[i] === q.Corretta }))
+            .filter(item => !item.isCorrect)
+            .map(item => item.numero);
+          const updated = [...new Set([...reviewList, ...wrongQuestions])];
+          localStorage.setItem('reviewList', JSON.stringify(updated));
+          setReviewList(updated);
+        }
+        
     if (autoSaveErrors) {
       const wrongQuestions = quizData.filter((q, i) => selectedAnswers[i] !== q.Corretta)
                                      .map(q => parseInt(q.Numero, 10));

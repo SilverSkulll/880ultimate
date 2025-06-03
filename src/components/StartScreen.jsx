@@ -14,10 +14,10 @@ export default function StartScreen({ onStart }) {
 
   return (
     <div className="p-6 text-center max-w-xl mx-auto bg-white rounded shadow relative">
-      <div className="absolute top-4 left-4">
+      <div className="absolute bottom-4 left-4">
         <button
           type="button"
-          className={autoSaveErrors ? "bg-green-700 text-white px-4 py-2 rounded" : "bg-gray-300 text-black px-4 py-2 rounded"}
+          className={autoSaveErrors ? "bg-green-700 text-white px-2 py-1 text-sm rounded" : "bg-gray-300 text-black px-2 py-1 text-sm rounded"}
           onClick={() => setAutoSaveErrors(!autoSaveErrors)}
         >
           {autoSaveErrors ? "📌 Salva errori nel ripasso" : "Ripasso errori disattivo"}
