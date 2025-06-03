@@ -68,16 +68,18 @@ export default function StartScreen({ onStart }) {
               {(i + 1) * 10} min
             </option>
           ))}
-        </select>
+      <div className="mb-4">
+        <label className="block font-semibold mb-1">Ripasso automatico errori:</label>
+        <button
+          type="button"
+          className={autoSaveErrors ? "w-full p-2 rounded font-semibold bg-green-700 text-white" : "w-full p-2 rounded font-semibold bg-gray-200"}
+          onClick={() => setAutoSaveErrors(!autoSaveErrors)}
+        >
+          {autoSaveErrors ? "✅ Attivo - Salva errori in ripasso" : "❌ Non attivo"}
+        </button>
       </div>
 
       <button onClick={handleStart} className="mt-4 px-4 py-2 bg-green-600 text-white rounded">
-      <div className="mb-4">
-        <button
-          type="button"
-        >
-        </button>
-      </div>
         ▶️ Avvia il quiz
       </button>
     </div>
