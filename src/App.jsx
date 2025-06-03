@@ -83,12 +83,20 @@ export default function App() {
   if (showResults || currentIndex >= quizData.length) {
     return (
       <div className="p-6 max-w-4xl mx-auto">
-        <div className="text-center p-4 border border-gray-300 rounded-lg mb-6 shadow">
-          <h2 className="text-2xl font-bold">📊 Risultati complessivi</h2>
-          <p className="text-lg mt-2">✅ <span style={{ color: 'green', fontWeight: 'bold' }}>{Object.values(selectedAnswers).filter(x => x === quizData[parseInt(x.Numero) - 1]?.Corretta).length}</span> corrette</p>
-          <p className="text-lg">❌ <span style={{ color: 'red', fontWeight: 'bold' }}>{Object.keys(selectedAnswers).length - Object.values(selectedAnswers).filter(x => x === quizData[parseInt(x.Numero) - 1]?.Corretta).length}</span> errate</p>
-          <p className="text-lg mt-1">📈 <strong>{Math.round((Object.values(selectedAnswers).filter(x => x === quizData[parseInt(x.Numero) - 1]?.Corretta).length / Object.keys(selectedAnswers).length) * 100)}%</strong> corrette</p>
-        </div>
+        {(() => {
+          const total = quizData.length;
+          const correct = quizData.filter((q, i) => selectedAnswers[i] === q.Corretta).length;
+          const wrong = total - correct;
+          const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+          return (
+            <div className="text-center p-4 border border-gray-300 rounded-lg mb-6 shadow">
+              <h2 className="text-2xl font-bold">📊 Risultati complessivi</h2>
+              <p className="text-lg mt-2">✅ <span style={{ color: 'green', fontWeight: 'bold' }}>{correct}</span> corrette</p>
+              <p className="text-lg">❌ <span style={{ color: 'red', fontWeight: 'bold' }}>{wrong}</span> errate</p>
+              <p className="text-lg mt-1">📈 <strong>{percentage}%</strong> corrette</p>
+            </div>
+          );
+        })()}
         <h2 className="text-2xl font-bold mb-4 text-center">📘 Riepilogo del test</h2>
         {quizData.map((q, i) => {
           const corr = q.Corretta;
