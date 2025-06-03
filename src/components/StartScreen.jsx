@@ -43,7 +43,7 @@ export default function StartScreen({ onStart }) {
         </div>
       )}
 
-      {mode !== 'review' && (
+      {(mode === 'random' || mode === 'review') && (
         <div className="mb-4">
           <label className="block font-semibold mb-1">Numero di domande:</label>
           <select className="w-full p-2 border rounded" value={count} onChange={(e) => setCount(Number(e.target.value))}>
